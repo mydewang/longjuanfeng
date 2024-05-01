@@ -276,9 +276,14 @@ function frame(vars) {
 }
 frame();
 </script>
-	<audio autoplay>
-  <source src="music.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+	<audio id="audioPlayer" src="music.mp3" autoplay></audio>
+
+    <script>
+        // 等待一段时间后播放音频
+        setTimeout(function() {
+            var audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.play();
+        }, 1000); // 1000 毫秒即 1 秒钟
+    </script>
 </body>
 </html>
